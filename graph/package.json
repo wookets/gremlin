@@ -4,5 +4,41 @@
   "main": "index.js",
   "author": "wookets",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --env node --ext .ts",
+    "release": "standard-version -m 'chore(release): %s [skip ci]'",
+    "start": "ts-node-dev --respawn --transpileOnly src/server.ts",
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "fastify": "^2.7.1",
+    "fastify-helmet": "^3.0.1",
+    "fastify-swagger": "^2.4.0",
+    "pino-pretty": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.7.0",
+    "@types/supertest": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "axios-mock-adapter": "^1.17.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.2",
+    "jest": "^24.9.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2",
+    "standard-version": "^7.0.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
+  }
 }
